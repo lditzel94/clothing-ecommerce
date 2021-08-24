@@ -1,6 +1,8 @@
+/** Base */
 import React from 'react'
 import './collection-preview.styles.scss'
 
+/** Components */
 import CollectionItem from '../collection-item/collection-item.component'
 
 const CollectionPreview = ({ title, items }) => {

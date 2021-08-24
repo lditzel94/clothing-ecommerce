@@ -1,11 +1,15 @@
-import { auth, createUserProfileDocument } from '../../firebase/firebase.utils'
-import CustomButton from '../custom-button/custom-button.component'
-import FormInput from '../form-input/form-input.component'
+/** Base */
+import React from 'react'
 import './sign-up.styles.scss'
 
-import React, { Component } from 'react'
+/** Firebase */
+import { auth, createUserProfileDocument } from '../../firebase/firebase.utils'
 
-export default class SignUp extends Component {
+/** Components */
+import CustomButton from '../custom-button/custom-button.component'
+import FormInput from '../form-input/form-input.component'
+
+export default class SignUp extends React.Component {
   constructor() {
     super()
 

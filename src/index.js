@@ -1,10 +1,14 @@
+/** Base */
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { BrowserRouter } from 'react-router-dom'
-import { Provider } from 'react-redux'
-
-import './index.css'
 import App from './App'
+import './index.css'
+
+/** Router */
+import { BrowserRouter } from 'react-router-dom'
+
+/** Redux */
+import { Provider } from 'react-redux'
 import store from './redux/store'
 
 ReactDOM.render(
