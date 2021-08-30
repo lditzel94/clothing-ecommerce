@@ -1,6 +1,12 @@
 /** Base */
 import React from 'react'
-import './collection.styles.scss'
+
+/** Styles */
+import {
+  CollectionPageContainer,
+  CollectionTitle,
+  CollectionItemsContainer,
+} from './collection.styles'
 
 /** Redux */
 import { connect } from 'react-redux'
@@ -16,10 +22,12 @@ function CollectionPage({ collection }) {
     items.map((item) => <CollectionItem key={item.id} item={item} />)
 
   return (
-    <div className="collection-page">
-      <h2 className="title">{title}</h2>
-      <div className="items">{renderCollectionItems()}</div>
-    </div>
+    <CollectionPageContainer>
+      <CollectionTitle>{title}</CollectionTitle>
+      <CollectionItemsContainer>
+        {renderCollectionItems()}
+      </CollectionItemsContainer>
+    </CollectionPageContainer>
   )
 }
 

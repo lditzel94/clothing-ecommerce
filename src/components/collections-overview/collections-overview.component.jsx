@@ -1,5 +1,7 @@
 import React from 'react'
-import './collections-overview.styles.scss'
+
+/** Styles */
+import { CollectionsOverviewContainer } from './collections-overview.styles'
 
 /** Redux */
 import { connect } from 'react-redux'
@@ -15,7 +17,11 @@ function CollectionsOverview({ collections }) {
       <CollectionPreview key={id} {...otherCollectionProps} />
     ))
 
-  return <div className="collections-overview">{renderCollectionPreview()}</div>
+  return (
+    <CollectionsOverviewContainer>
+      {renderCollectionPreview()}
+    </CollectionsOverviewContainer>
+  )
 }
 
 const mapStateToProps = createStructuredSelector({

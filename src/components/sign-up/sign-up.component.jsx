@@ -1,6 +1,8 @@
 /** Base */
 import React from 'react'
-import './sign-up.styles.scss'
+
+/** Styles */
+import { SignUpContainer, SignUpTitle } from './sign-up.styles'
 
 /** Firebase */
 import { auth, createUserProfileDocument } from '../../firebase/firebase.utils'
@@ -58,8 +60,8 @@ export default class SignUp extends React.Component {
   render() {
     const { displayName, email, password, confirmPassword } = this.state
     return (
-      <div className="sign-up">
-        <h2 className="title">I do not have an account</h2>
+      <SignUpContainer>
+        <SignUpTitle>I do not have a account</SignUpTitle>
         <span>Sign up with your email and password</span>
         <form className="sign-up-form" onSubmit={this.handleSubmit}>
           <FormInput
@@ -94,10 +96,9 @@ export default class SignUp extends React.Component {
             label="Confirm Password"
             required
           />
-
-          <CustomButton type="submit">Sign Up</CustomButton>
+          <CustomButton type="submit">SIGN UP</CustomButton>
         </form>
-      </div>
+      </SignUpContainer>
     )
   }
 }
